@@ -1,0 +1,13 @@
+<seelog minlevel="m%">
+    <outputs formatid="runtime">
+        <console/>
+        <filter levels="info,warn,error,debug">
+            <buffered formatid="runtime" size="10000" flushperiod="100">
+                <rollingfile type="date" filename="/Users/hepengfei/Documents/log/topon_logs/runtime/s%/runtime.log" datepattern="2006-01-02-15" maxrolls="72"/>
+            </buffered>
+        </filter>
+    </outputs>
+    <formats>
+        <format id="runtime" format="%Date %Time [%LEVEL] [%Func] [%RelFile:%Line] %Msg%n"/>
+    </formats>
+</seelog>
