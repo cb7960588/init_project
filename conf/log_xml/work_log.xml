@@ -3,27 +3,27 @@
         <console/>
         <filter levels="info">
             <buffered formatid="ad_log" size="10000" flushperiod="100">
-                <rollingfile type="date" filename="/Users/hepengfei/Documents/log/direct_ad/info/info.log" datepattern="2006-01-02-15" maxrolls="72"/>
+                <rollingfile type="date" filename="/Users/hepengfei/Documents/log/demo/info/info.log" datepattern="2006-01-02-15" maxrolls="72"/>
             </buffered>
         </filter>
         <filter levels="debug">
             <buffered formatid="ad_log" size="10000" flushperiod="100">
-                <rollingfile type="date" filename="/Users/hepengfei/Documents/log/direct_ad/others/debug.log" datepattern="2006-01-02-15" maxrolls="72"/>
+                <rollingfile type="date" filename="/Users/hepengfei/Documents/log/demo/others/debug.log" datepattern="2006-01-02-15" maxrolls="72"/>
             </buffered>
         </filter>
         <filter levels="warn">
             <buffered formatid="ad_log" size="10000" flushperiod="100">
-                <rollingfile type="date" filename="/Users/hepengfei/Documents/log/direct_ad/others/warn.log" datepattern="2006-01-02-15" maxrolls="72"/>
+                <rollingfile type="date" filename="/Users/hepengfei/Documents/log/demo/others/warn.log" datepattern="2006-01-02-15" maxrolls="72"/>
             </buffered>
         </filter>
         <filter levels="error">
             <buffered formatid="ad_log" size="10000" flushperiod="100">
-                <rollingfile type="date" filename="/Users/hepengfei/Documents/log/direct_ad/others/error.log" datepattern="2006-01-02-15" maxrolls="72"/>
+                <rollingfile type="date" filename="/Users/hepengfei/Documents/log/demo/others/error.log" datepattern="2006-01-02-15" maxrolls="72"/>
             </buffered>
         </filter>
         <filter levels="critical">
             <buffered formatid="ad_log" size="10000" flushperiod="100">
-                <rollingfile type="date" filename="/Users/hepengfei/Documents/log/direct_ad/others/critical.log" datepattern="2006-01-02-15" maxrolls="72"/>
+                <rollingfile type="date" filename="/Users/hepengfei/Documents/log/demo/others/critical.log" datepattern="2006-01-02-15" maxrolls="72"/>
             </buffered>
         </filter>
     </outputs>
