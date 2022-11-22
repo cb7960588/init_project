@@ -3,7 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
-	"init_project/internal/database"
+	"init_project/init_project"
 	"init_project/internal/service"
 	"init_project/internal/utils"
 	"init_project/routers"
@@ -26,22 +26,16 @@ func main() {
 		os.Exit(1)
 	}
 
-	//初始化日志模块
-	logger := utils.Logger
-	err := logger.Init(utils.Config.LogConfig.RuntimeConf, utils.Config.LogConfig.WorkConf)
+	err := init_project.InitProject()
 	if err != nil {
-		fmt.Println("InitLog failed: ", err.Error())
+		fmt.Println("init project failed: ",err.Error())
 		os.Exit(1)
 	}
 
-	//初始化redis
-	if err := database.InitRedis(); err != nil {
-		fmt.Println("InitRedis failed: ", err.Error())
-		os.Exit(1)
-	}
-	defer database.CloseRedis()
-	//初始化db
-	database.InitDB()
+	
+
+
+
 	//初始化http服务
 	service := service.NewService()
 	loadRouters := routers.LoadRouters(service)

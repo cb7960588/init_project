@@ -12,6 +12,7 @@ type AdConfig struct {
 	RedisConfig *RedisConfig
 	LogConfig   *LogConfig
 	MysqlConfig *DbConfig
+	AerospikeConfig *AerospikeConfig
 }
 type HttpConfig struct {
 	Port int
@@ -37,6 +38,11 @@ type DbConfig struct {
 	Password string
 	Dbname   string
 	Status   bool
+}
+type AerospikeConfig struct {
+	AerospikeAddr      string
+	AerospikePort      int
+	AerospikeNamespace string
 }
 
 func LoadConfigFile(confPath string) error {
